@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/queries.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo-link">
+        <img
+          src="./assets/images/logo.svg"
+          alt="Snap logo"
+          class="header__logo-img"
+        />
+      </a>
+      <button
+        class="header__navbar-btn header__navbar-btn--open"
+        aria-expanded="false"
+        aria-controls="header-navigation"
+      >
+        <img src="./assets/images/icon-menu.svg" alt="" class="open-menu-img" />
+      </button>
+      <nav class="header__nav">
+        <div class="header__nav-container">
+          <button class="header__navbar-btn header__navbar-btn--close">
+            <img
+              src="./assets/images/icon-close-menu.svg"
+              alt=""
+              class="close-menu-img"
+            />
+          </button>
+          <ul class="header__nav-list">
+            <li
+              class="header__nav-item header__nav-item--features"
+              aria-expanded="false"
+              aria-controls="features-sublist"
+            >
+              <a href="#" class="header__nav-link header__nav-link--features"
+                >Features
+                <img
+                  class="nav-arrow nav-arrow--features"
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt=""
+              /></a>
+              <ul
+                class="header__nav-sublist header__nav-sublist--features"
+                id="features-sublist"
+              >
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink"
+                    ><img
+                      src="./assets/images/icon-todo.svg"
+                      alt=""
+                      class="feature-icon"
+                    />
+                    <span class="feature-text">Todo List</span></a
+                  >
+                </li>
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink"
+                    ><img
+                      src="./assets/images/icon-calendar.svg"
+                      alt=""
+                      class="feature-icon"
+                    />
+                    Calendar</a
+                  >
+                </li>
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink"
+                    ><img
+                      src="./assets/images/icon-reminders.svg"
+                      alt=""
+                      class="feature-icon"
+                    />
+                    Reminders</a
+                  >
+                </li>
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink"
+                    ><img
+                      src="./assets/images/icon-planning.svg"
+                      alt=""
+                      class="feature-icon"
+                    />
+                    Planning</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li
+              class="header__nav-item header__nav-item--company"
+              aria-expanded="false"
+              aria-controls="company-sublist"
+            >
+              <a href="#" class="header__nav-link header__nav-link--company"
+                >Company<img
+                  class="nav-arrow nav-arrow--company"
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt=""
+              /></a>
+              <ul
+                class="header__nav-sublist header__nav-sublist--company"
+                id="company-sublist"
+              >
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink">History</a>
+                </li>
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink">Our Team</a>
+                </li>
+                <li class="header__nav-subitem">
+                  <a href="#" class="header__nav-sublink">Blog</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Careers</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">About</a>
+            </li>
+          </ul>
+          <div class="header__nav-buttons">
+            <a href="#" class="header__btn header__btn--login">Login</a>
+            <a href="#" class="header__btn header__btn--register">Register</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="intro-section">
+        <img
+          src="./assets/images/image-hero-mobile.png"
+          alt=""
+          class="intro__img"
+        />
+        <div class="intro__content">
+          <h1 class="intro__header"><span>Make</span> remote work</h1>
+          <p class="intro__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+        </div>
+        <a href="#" class="intro__btn">Learn more</a>
+        <div class="intro__company-box">
+          <img
+            src="./assets/images/client-databiz.svg"
+            alt="Databiz logo"
+            class="intro__company-logo"
+          />
+          <img
+            src="./assets/images/client-audiophile.svg"
+            alt="Audiophile logo"
+            class="intro__company-logo"
+          />
+          <img
+            src="./assets/images/client-meet.svg"
+            alt="Meet logo"
+            class="intro__company-logo"
+          />
+          <img
+            src="./assets/images/client-maker.svg"
+            alt="Maker logo"
+            class="intro__company-logo"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer flex-center">
+      <span class="attribution"
+        >Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+      </span>
+      <span class="boxv">&boxv;</span>
+      <span class="attribution"
+        >Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/josh76543210"
+          target="_blank"
+          >josh76543210</a
+        >
+      </span>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

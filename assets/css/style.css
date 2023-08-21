@@ -1,0 +1,309 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+/* Colors */
+:root {
+  /* NEUTRAL */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  line-height: 1;
+  font-size: calc((18 / 16) * 1rem);
+  font-weight: 500;
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  transition: all 0.2s ease-in;
+}
+
+a:focus,
+button:focus {
+  outline: calc((2 / 16) * 1rem) dashed var(--almost-black);
+}
+
+/* Header */
+.header {
+  height: calc((80 / 16) * 1rem);
+  padding: 0 calc((20 / 16) * 1rem);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__navbar-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.header__nav ul {
+  list-style-type: none;
+}
+
+.header__nav a:hover,
+.header__nav a:active {
+  color: var(--almost-black);
+}
+
+.header__nav-container {
+  color: var(--medium-gray);
+  font-size: calc((16 / 16) * 1rem);
+  padding: calc((30 / 16) * 1rem) calc((20 / 16) * 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.header__navbar-btn--close {
+  margin-bottom: calc((30 / 16) * 1rem);
+
+  align-self: flex-end;
+}
+
+.header__nav-list {
+  margin-bottom: calc((40 / 16) * 1rem);
+
+  display: flex;
+  flex-direction: column;
+  gap: calc((30 / 16) * 1rem);
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  gap: calc((10 / 16) * 1rem);
+}
+
+.header__nav-sublist {
+  margin: calc((30 / 16) * 1rem) calc((20 / 16) * 1rem) 0;
+}
+
+.header__nav-sublist .header__nav-subitem {
+  margin-bottom: calc((20 / 16) * 1rem);
+}
+
+.header__nav-sublist:last-child {
+  margin-bottom: 0;
+}
+
+.header__nav-sublist--features .header__nav-sublink {
+  display: grid;
+  align-items: center;
+  grid-template-columns: calc((20 / 16) * 1rem) 1fr;
+  column-gap: calc((20 / 16) * 1rem);
+}
+
+.feature-icon {
+  height: calc((20 / 16) * 1rem);
+
+  justify-self: end;
+  align-self: center;
+  display: inline-block;
+}
+
+.feature-text {
+  align-self: center;
+}
+
+.header__btn {
+  text-align: center;
+
+  display: block;
+}
+
+.header__btn--login {
+  margin: 0 auto calc((17 / 16) * 1rem);
+  padding: calc((5 / 16) * 1rem);
+}
+
+.header__btn--register {
+  width: 100%;
+  border: calc((1.5 / 16) * 1rem) solid var(--medium-gray);
+  padding: calc((12 / 16) * 1rem) calc((20 / 16) * 1rem);
+  border-radius: calc((13 / 16) * 1rem);
+}
+
+.header__btn--register:hover,
+.header__btn--register:active {
+  background-color: var(--almost-black);
+  color: var(--almost-white) !important;
+  border-color: transparent !important;
+}
+
+/* submenu controls */
+[aria-expanded="true"] .nav-arrow {
+  content: url(../images/icon-arrow-up.svg);
+}
+/* features */
+[aria-expanded="false"] > .header__nav-sublist--features {
+  display: none;
+}
+
+[aria-expanded="true"] > .header__nav-sublist--features {
+  display: block;
+}
+
+/* company */
+[aria-expanded="false"] > .header__nav-sublist--company {
+  display: none;
+}
+
+[aria-expanded="true"] > .header__nav-sublist--company {
+  display: block;
+}
+
+/* navmenu controls */
+[aria-controls="header-navigation"] {
+  display: block;
+}
+
+[aria-expanded="false"] ~ .header__nav {
+  display: none;
+}
+
+[aria-expanded="true"] ~ .header__nav {
+  background: #00000099;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+[aria-expanded="true"] ~ .header__nav > .header__nav-container {
+  background: var(--almost-white);
+  width: calc((250 / 16) * 1rem);
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+
+/* Main */
+.main {
+  min-height: calc(100vh - calc((160 / 16) * 1rem));
+}
+.intro__img {
+  margin: 0 auto calc((70 / 16) * 1rem);
+  width: 100%;
+  max-width: calc((500 / 16) * 1rem);
+}
+
+.intro__content {
+  text-align: center;
+  padding: 0 calc((20 / 16) * 1rem);
+  max-width: calc((500 / 16) * 1rem);
+  margin: 0 auto;
+}
+
+.intro__header {
+  font-size: calc((32 / 16) * 1rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: calc((20 / 16) * 1rem);
+}
+
+.intro__text {
+  color: var(--medium-gray);
+  line-height: 1.5;
+  margin-bottom: calc((20 / 16) * 1rem);
+}
+
+.intro__btn {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  width: fit-content;
+  padding: calc((15 / 16) * 1rem) calc((20 / 16) * 1rem);
+  margin: 0 auto calc((50 / 16) * 1rem);
+  border-radius: calc((15 / 16) * 1rem);
+  border: calc((1.5 / 16) * 1rem) solid var(--almost-black);
+
+  display: block;
+}
+
+.intro__btn:hover,
+.intro__btn:active {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+}
+
+.intro__company-box {
+  padding: 0 calc((20 / 16) * 1rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro__company-logo {
+  height: calc((14 / 16) * 1rem);
+}
+
+/* Footer */
+footer {
+  margin-top: calc((30 / 16) * 1rem);
+  height: calc((50 / 16) * 1rem);
+  min-width: calc((170 / 16) * 1rem);
+  color: var(--almost-black);
+  background-color: transparent;
+  font-size: calc((13 / 16) * 1rem);
+  line-height: 1.3;
+
+  flex-direction: column;
+  gap: calc((5 / 16) * 1rem);
+}
+
+.boxv {
+  display: none;
+}
+
+.attribution {
+  font-size: calc((11 / 16) * 1rem);
+}
+
+.attribution a:link,
+.attribution a:visited {
+  color: var(--almost-black);
+  padding: calc((1 / 16) * 1rem);
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:active {
+  color: var(--blue);
+  border-bottom: calc((1 / 16) * 1rem) solid var(--almost-black);
+}
+
+.attribution a:focus {
+  outline: calc((2 / 16) * 1rem) dashed var(--almost-black);
+}

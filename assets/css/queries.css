@@ -1,0 +1,250 @@
+/**********************/
+/*     over 368px     */
+/**********************/
+@media (min-width: 23em) {
+  footer {
+    flex-direction: row;
+    gap: calc((10 / 16) * 1rem);
+  }
+
+  .boxv {
+    display: inline;
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((17 / 16) * 1rem);
+  }
+}
+
+/**********************/
+/*     over 432px     */
+/**********************/
+@media only screen and (min-width: 27em) {
+  /* Main */
+  .intro__header {
+    font-size: calc((40 / 16) * 1rem);
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((22 / 16) * 1rem);
+  }
+}
+
+/**********************/
+/*     over 640px     */
+/**********************/
+@media only screen and (min-width: 43em) {
+  /* Main */
+  .intro__header {
+    font-size: calc((45 / 16) * 1rem);
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((32 / 16) * 1rem);
+  }
+
+  .intro__company-box {
+    height: calc((32 / 16) * 1rem);
+    padding: 0 calc((50 / 16) * 1rem);
+  }
+}
+
+/**********************/
+/*     over 928px     */
+/**********************/
+@media only screen and (min-width: 58em) {
+  /* Header */
+  /* navbar controls */
+  [aria-controls="header-navigation"] {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ .header__nav {
+    display: inline-block;
+  }
+
+  [aria-expanded="false"] ~ .header__nav {
+    display: inline-block;
+  }
+
+  .header__navbar-btn {
+    display: none;
+  }
+
+  .header__logo-link {
+    margin-right: calc((30 / 16) * 1rem);
+  }
+
+  .header__logo-img {
+    height: calc((30 / 16) * 1rem);
+    width: auto;
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .header__nav-container {
+    width: 100%;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__nav-list {
+    margin-bottom: 0;
+
+    flex-direction: row;
+  }
+
+  .header__nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: calc((35 / 16) * 1rem);
+  }
+
+  .header__btn--login {
+    margin: 0;
+  }
+
+  .header__nav-item--features,
+  .header__nav-item--company {
+    position: relative;
+  }
+
+  /* submenu nav */
+  .header__nav-sublist {
+    width: calc((120 / 16) * 1rem);
+    background-color: var(--almost-white);
+    padding: calc((20 / 16) * 1rem);
+    padding-bottom: 0;
+    border-radius: calc((7 / 16) * 1rem);
+    box-shadow: calc((7 / 16) * 1rem) calc((10 / 16) * 1rem)
+      calc((30 / 16) * 1rem) calc((5 / 16) * 1rem) #00000022;
+    position: absolute;
+    top: 0;
+    left: calc((-18 / 16) * 1rem);
+  }
+
+  .header__nav-sublist:last-child {
+    margin-bottom: 0;
+  }
+
+  .header__nav-sublist--features {
+    width: calc((165 / 16) * 1rem);
+    left: calc((-90 / 16) * 1rem);
+  }
+
+  /* Main */
+  .main {
+    max-width: calc((1200 / 16) * 1rem);
+    margin: calc((50 / 16) * 1rem) auto 0;
+    padding: 0 calc((30 / 16) * 1rem);
+  }
+
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr calc((450 / 16) * 1rem);
+    grid-template-rows: calc((400 / 16) * 1rem) 1fr 1fr;
+    column-gap: calc((80 / 16) * 1rem);
+  }
+
+  .intro__img {
+    max-width: none;
+
+    grid-column: 2;
+    grid-row: 1 / 4;
+    content: url(../images/image-hero-desktop.png);
+  }
+
+  .intro__content {
+    text-align: left;
+    max-width: none;
+    padding: 0;
+
+    align-self: end;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .intro__header {
+    text-align: left;
+    font-size: calc((45 / 16) * 1rem);
+    margin-bottom: calc((40 / 16) * 1rem);
+  }
+
+  .intro__header span {
+    display: block;
+  }
+
+  .intro__text {
+    margin-bottom: calc((40 / 16) * 1rem);
+  }
+
+  .intro__btn {
+    height: fit-content;
+    padding: calc((20 / 16) * 1rem) calc((30 / 16) * 1rem);
+    margin: 0;
+    margin-bottom: calc((100 / 16) * 1rem);
+
+    align-self: center;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .intro__company-box {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((18 / 16) * 1rem);
+  }
+
+  .intro__company-box {
+    padding: 0;
+  }
+}
+
+/***********************/
+/*     over 992px     */
+/***********************/
+@media only screen and (min-width: 62em) {
+  /* Main */
+  .intro__header {
+    font-size: calc((55 / 16) * 1rem);
+  }
+
+  .intro__text {
+    margin-right: calc((100 / 16) * 1rem);
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((20 / 16) * 1rem);
+  }
+}
+
+/***********************/
+/*     over 1120px     */
+/***********************/
+@media only screen and (min-width: 70em) {
+  /* Main */
+  .intro__header {
+    font-size: calc((72 / 16) * 1rem);
+  }
+
+  .intro__text {
+    margin-right: calc((130 / 16) * 1rem);
+  }
+
+  /* company logos */
+  .intro__company-logo {
+    height: calc((25 / 16) * 1rem);
+  }
+}

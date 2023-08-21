@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-rM8Bs-lybF](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-rM8Bs-lybF)
+- Live Site URL: [https://josh76543210-fm-intro-dropdown-nav.netlify.app/](https://josh76543210-fm-intro-dropdown-nav.netlify.app/)
 
 ## My process
 
